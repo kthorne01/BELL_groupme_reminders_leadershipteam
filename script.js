@@ -1,23 +1,30 @@
+const apiUrl = "https://rcp8d10vab.execute-api.us-east-1.amazonaws.com/prod/events"; // Replace with your working Invoke URL
+
 document.getElementById("eventForm").onsubmit = async (e) => {
     e.preventDefault();
+
     const data = {
         eventName: document.getElementById("eventName").value,
         eventDate: document.getElementById("eventDate").value,
         eventTime: document.getElementById("eventTime").value,
     };
-    
-    // Send event details to the backend
-    const response = await fetch("https://<API-GATEWAY-ENDPOINT>", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-    });
 
-    if (response.ok) {
-        alert("Event submitted successfully!");
-    } else {
-        alert("Failed to submit the event.");
+    try {
+        const response = await fetch(apiUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+            alert("Event submitted successfully!");
+        } else {
+            alert("Failed to submit the event.");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("An error occurred while submitting the event.");
     }
 };
