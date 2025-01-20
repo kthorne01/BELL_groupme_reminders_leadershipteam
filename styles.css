@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Header */
+header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Main Content */
+main {
+    margin-bottom: 100px;
+}
+
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Arrange children vertically */
+    align-items: center; /* Center align all children horizontally */
+}
+
+label {
+    width: 100%; /* Ensure labels span the full form width */
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: left; /* Keep label text left-aligned */
+}
+
+input {
+    width: 90%; /* Adjust input width relative to the form */
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Prevent padding from affecting width */
+}
+
+/* form {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+} */
+
+button {
+    width: 50%;
+    padding: 10px;
+    margin: 20px auto;
+    background-color: #b00;
+    color: #fff;
+    border: 3px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+}
+
+button:hover {
+    background-color: #900;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+}
