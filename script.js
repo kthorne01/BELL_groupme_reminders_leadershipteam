@@ -1,4 +1,4 @@
-const apiUrl = "https://rcp8d10vab.execute-api.us-east-1.amazonaws.com/prod/events"; // Replace with your working Invoke URL
+const apiUrl = "https://nhg59wug76.execute-api.us-east-1.amazonaws.com/events"; // Replace with your working Invoke URL
 
 document.getElementById("eventForm").onsubmit = async (e) => {
     e.preventDefault();
