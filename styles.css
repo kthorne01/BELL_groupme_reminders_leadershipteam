@@ -46,7 +46,19 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box; /* Prevent padding from affecting width */
+    transition: transform 0.2s ease; /* Smooth animation for scaling */
 }
+
+/* Enlarge the input field on focus */
+input:focus {
+    transform: scale(1.2); /* Adjust scale as needed */
+}
+
+/* Revert to normal size when not focused */
+input:not(:focus) {
+    transform: scale(1);
+}
+
 
 /* form {
     max-width: 400px;
